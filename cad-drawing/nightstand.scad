@@ -1,8 +1,18 @@
 /*
+
     Nightstand
+    
+    By Anton Augustsson
+    
+    
 */
 
-// Variables
+
+
+/*
+    ---------- Variables ---------- 
+*/
+
 thickness = 25;
 
 totalHeight = 600;
@@ -29,10 +39,19 @@ boxBottomWidth = boxWidth-thickness*2;
 shelfPositionHeight = 120;
 shelfWidth = tenonThickness;
 
-// Code
+
+
+/* 
+    ---------- Code ----------
+*/
+
+
+
+// ---------- Leg ----------
 
 color("Wheat")
 union(){
+         
 // leg 1
 translate([
     0,
@@ -74,6 +93,8 @@ cube(size = [
     legLength]);
     
 
+// ---------- Tenons ----------
+
 // front upper tenon
 translate([
     0,
@@ -113,7 +134,6 @@ cube(size = [
     tenonLengthX,
     tenonWidth,
     tenonThickness]);
-
 
 // left upper tenon
 translate([
@@ -157,31 +177,12 @@ cube(size = [
     
 }
 
-    
-color("tan")
-union(){  // Shelf
-/*
-// Shelf left upper tenon
-translate([
-    0,
-    legWidth,
-    shelfPositionHeight]) 
-cube(size = [
-    tenonWidth,
-    tenonLengthY,
-    tenonThickness]);
 
-// right upper tenon
-translate([
-    tenonLengthX-legThickness,
-    legWidth,
-    shelfPositionHeight]) 
-cube(size = [
-    tenonWidth,
-    tenonLengthY,
-    tenonThickness]);
+/* 
+  ---------- Shelf ----------
 */
 
+color("tan")
 // Shelf
 translate([
     0,
@@ -192,11 +193,13 @@ cube(size = [
     tenonLengthY,
     thickness]);
 
-}
 
+/* 
+  ---------- Box ----------
+*/
 
 color("tan")
-union(){  // box
+union(){ 
 // Box Front
 translate([
     legThickness,
@@ -266,11 +269,14 @@ cube(size = [
     thickness,
     thickness,
     boxHeight]);
-    
-    
+        
 }
 
-// Top
+
+/* 
+  ---------- Top ----------
+*/
+
 color("Sienna")
 translate([
     -extraWidth,
