@@ -13,16 +13,16 @@
     ---------- Variables ---------- 
 */
 
-thickness = 25;
+thickness = 25; // Ash
 
-totalHeight = 600;
+totalHeight = 600;  
 totalWidth  = 420;
 totalDepth  = 420;
 
-extraWidth = 10;
-extraDepth = 10;
+extraWidth = 10;  // Each side 
+extraDepth = 10;  // Each side
 
-legWidth     = 30;
+legWidth     = 30; 
 legLength    = totalHeight-thickness;
 legThickness = thickness;
 
@@ -36,7 +36,7 @@ boxWidth  = totalWidth-extraWidth*2-legThickness*2;
 boxDepth  = totalDepth-extraDepth*2-thickness*2;
 boxBottomWidth = boxWidth-thickness*2;
 
-shelfPositionHeight = 120;
+shelfPositionHeight = 140;
 shelfWidth = tenonThickness;
 
 
@@ -253,7 +253,7 @@ cube(size = [
 // Box left side stop
 translate([
     0,
-    legThickness+tenonLengthY-thickness,
+    legWidth+tenonLengthY-thickness,
     legLength-boxHeight-tenonThickness]) 
 cube(size = [
     thickness,
@@ -263,19 +263,38 @@ cube(size = [
 // Box Right side stop
 translate([
     legThickness+boxWidth,
-    legThickness+tenonLengthY-thickness,
+    legWidth+tenonLengthY-thickness,
     legLength-boxHeight-tenonThickness]) 
 cube(size = [
     thickness,
     thickness,
     boxHeight]);
-        
+ 
+// Box Top Left 
+translate([
+    tenonWidth,
+    250,
+    legLength-boxHeight-tenonThickness+boxHeight]) 
+cube(size = [
+    thickness,
+    thickness,
+    thickness]);
+    
+// Box Top Right 
+translate([
+    legThickness+boxWidth-thickness,
+    250,
+    legLength-boxHeight-tenonThickness+boxHeight]) 
+cube(size = [
+    thickness,
+    thickness,
+    thickness]);
 }
 
 
 /* 
   ---------- Top ----------
-*/
+
 
 color("Sienna")
 translate([
@@ -286,3 +305,4 @@ cube(size = [
     totalWidth,
     totalDepth,
     thickness]);
+*/
