@@ -1,6 +1,8 @@
 # nightstands
 Modern and slim nightstands
 
+![nightstand](nightstand.png)
+
 ## BOM
 * ash
 
@@ -17,3 +19,4 @@ Modern and slim nightstands
 
 * 1x top: 420x420x23                (not final)
 * 1x shelf: 400x400x23              (not final)
+

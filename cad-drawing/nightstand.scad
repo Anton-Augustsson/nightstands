@@ -292,11 +292,11 @@ cube(size = [
 }
 
 
-/* 
-  ---------- Top ----------
+ 
+//  ---------- Top ----------
 
 
-color("Sienna")
+color("tan")
 translate([
     -extraWidth,
     -extraDepth,
@@ -305,4 +305,3 @@ cube(size = [
     totalWidth,
     totalDepth,
     thickness]);
-*/
